@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="tipCalculator.MainPage">
-    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto"
-          ColumnDefinitions="Auto, Auto">
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto "
+          ColumnDefinitions="1400, 1600">
 
         <Label Text="Total da conta" WidthRequest="100" VerticalOptions="Center"/>
         <Entry Grid.Column="1" x:Name="billInput" Placeholder="Insira o valor" Keyboard="Numeric"/>
@@ -19,15 +19,15 @@
 
 
         <Label Grid.Row="5" Text="Porcentagem de gorjeta" WidthRequest="100"/>
-        <Label x:Name="tipPercent" Text="15%"/>
+        <Label Grid.Row="6"  x:Name="tipPercent" Text="15%"/>
 
-        <Slider x:Name="tipPercentSlider" Minimum="0" Maximum="100" Value="15"/>
+        <Slider Grid.Row="7" x:Name="tipPercentSlider" Minimum="0" Maximum="100" Value="15"/>
 
-        <Button Text= "15%" WidthRequest="150" HorizontalOptions="Center" Clicked="OnNormalTip"/>
-        <Button Text= "20%" WidthRequest="150" HorizontalOptions="Center" Clicked="OnGenerousTip"/>
+        <Button Grid.Row="8" Text= "15%" WidthRequest="150" HorizontalOptions="Center" Clicked="OnNormalTip"/>
+        <Button Grid.Row="8" Grid.Column="1" Text= "20%" WidthRequest="150" HorizontalOptions="Center" Clicked="OnGenerousTip"/>
 
-        <Button x:Name="roundDown" WidthRequest="150" HorizontalOptions="Center" Text="Round Down"/>
-        <Button x:Name="roundUp" WidthRequest="150" HorizontalOptions="Center" Text="Round Up"/>
+        <Button Grid.Row="9" x:Name="roundDown" WidthRequest="150" HorizontalOptions="Center" Text="Round Down"/>
+        <Button Grid.Row="9" Grid.Column="2" x:Name="roundUp" WidthRequest="150" HorizontalOptions="Center" Text="Round Up"/>
 
 
 
